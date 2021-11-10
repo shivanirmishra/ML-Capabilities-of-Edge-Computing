@@ -13,19 +13,19 @@ https://docs.nvidia.com/video-technologies/video-codec-sdk/ffmpeg-with-nvidia-gp
 **Installation Steps:**
 To compile FFmpeg on Linux, do the following:
 1. Clone ffnvcodec 
-    git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+> git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
 2. Install ffnvcodec 
-    cd nv-codec-headers && sudo make install && cd ..
+> cd nv-codec-headers && sudo make install && cd ..
 3. Clone FFmpeg's public GIT repository. 
-    git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg/
+> git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg/
 4. Install necessary packages. 
-    sudo apt-get install build-essential yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev
+> sudo apt-get install build-essential yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev
 5. Configure
-    ./configure --enable-nonfree --enable-cuda-nvcc --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
+> ./configure --enable-nonfree --enable-cuda-nvcc --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
 6. Compile 
-    make -j 8
+> make -j 8
 7. Install the libraries. 
-    sudo make install
+> sudo make install
 
 **Install x264**
 It’s optional step but if we planning using in future regular software encoding also, we need install x264.
