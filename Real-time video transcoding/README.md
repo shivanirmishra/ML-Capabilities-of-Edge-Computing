@@ -1,5 +1,7 @@
 ## **Real-time video transcoding**
 
+### **On Server**
+
 **Video transcoding** is one of the most important steps in the streaming video process, but it can be difficult to facilitate. Video providers must be able to accommodate an increasing number of display devices with screen resolutions and frame rates that creep higher over time. And as devices, resolutions, and frame rates increase, so does the transcoding time required for complex video that is distributed on-demand.
 
 **FFMPEG** is one of the most popular open-source multimedia manipulation tools with a library of plugins that can be applied to various parts of the audio and video processing pipelines and have achieved wide adoption across the world.
@@ -41,3 +43,4 @@ The following command reads file input.mp4 and transcodes it to output.mp4 with 
 **Working with:**
 ffmpeg -init_hw_device cuda=0 -i test.mp4 -vcodec h264_nvenc -pix_fmt cuda -preset lossless -filter_hw_device 0 -vf hwupload,yadif_cuda=1 -acodec copy -r 60 -f mp4 output.mp4
  
+### **On Jetson-nano**
