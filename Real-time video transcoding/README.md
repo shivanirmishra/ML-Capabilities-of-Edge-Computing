@@ -16,19 +16,32 @@ https://docs.nvidia.com/video-technologies/video-codec-sdk/ffmpeg-with-nvidia-gp
 **Installation Steps:**
 To compile FFmpeg on Linux, do the following:
 1. Clone ffnvcodec 
-- git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+
+`git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git`
+
 2. Install ffnvcodec 
-- cd nv-codec-headers && sudo make install && cd ..
+
+`cd nv-codec-headers && sudo make install && cd ..`
+
 3. Clone FFmpeg's public GIT repository. 
-- git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg/
+
+`git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg/`
+
 4. Install necessary packages. 
-- sudo apt-get install build-essential yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev
+
+`sudo apt-get install build-essential yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev`
+
 5. Configure
-- ./configure --enable-nonfree --enable-cuda-nvcc --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
+
+`./configure --enable-nonfree --enable-cuda-nvcc --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64`
+
 6. Compile 
-- make -j 8
+
+`make -j 8`
+
 7. Install the libraries. 
-- sudo make install
+
+`sudo make install`
 
 **Install x264**
 It’s optional step but if we planning using in future regular software encoding also, we need install x264.
@@ -42,7 +55,8 @@ It’s optional step but if we planning using in future regular software encodin
 The following command reads file input.mp4 and transcodes it to output.mp4 with H.264 video at the same resolution and with the same audio codec.
 
 **Working with:**
-ffmpeg -init_hw_device cuda=0 -i test.mp4 -vcodec h264_nvenc -pix_fmt cuda -preset lossless -filter_hw_device 0 -vf hwupload,yadif_cuda=1 -acodec copy -r 60 -f mp4 output.mp4
+
+`ffmpeg -init_hw_device cuda=0 -i test.mp4 -vcodec h264_nvenc -pix_fmt cuda -preset lossless -filter_hw_device 0 -vf hwupload,yadif_cuda=1 -acodec copy -r 60 -f mp4 output.mp4`
  
 ### **On Jetson-nano**  
 > https://github.com/jocover/jetson-ffmpeg
@@ -82,7 +96,7 @@ L4T Multimedia API for ffmpeg
 `ffmpeg -c:v h264_nvmpi -i input_file -f null -`
 
 **Working with:** 
-- ffmpeg -c:v h264 -i input.mp4 output.mp4
+`ffmpeg -c:v h264 -i input.mp4 output.mp4`
 
 ### **Supports Encoding**
 
@@ -94,7 +108,7 @@ L4T Multimedia API for ffmpeg
 `ffmpeg -i input_file -c:v h264_nvmpi <output.mp4>`
 
 **Working with:** 
-- ffmpeg -i input.mp4 -c:v mpeg4 output.mkv
+`ffmpeg -i input.mp4 -c:v mpeg4 output.mkv`
 
 It is working with mpeg4, gif, flv etc but not working with nvenc.
 Jetson nano is only able to decode video files or streams since it is an edge computing device Nvidia might not have enabled nvenc functionalities for encoding videos. Looks like it's hardly possible to encode video using ffmpeg in jetson nano.
