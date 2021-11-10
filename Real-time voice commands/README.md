@@ -9,7 +9,7 @@
 
 2. Make env with python 3.7
 
-- conda create -n voice python=3.7
+`conda create -n voice python=3.7`
 
 3. conda activate voice
 
@@ -21,9 +21,10 @@
 
 7. **Download Pretrained Models**
 
-- cd Real-Time-Voice-Cloning
+`cd Real-Time-Voice-Cloning`
 > wget [https://github.com/blue-fish/Real-Time-Voice-Cloning/releases/download/v1.0/pretrained.zip](https://github.com/blue-fish/Real-Time-Voice-Cloning/releases/download/v1.0/pretrained.zip)
-- unzip pretrained.zip
+
+`unzip pretrained.zip`
 
 8. python demo_cli.py --no_mp3_support
 
@@ -45,7 +46,7 @@ Example: This is a GUI-less example of interface to SV2TTS. The purpose of this 
 
 2. Make env with python 3.7
 
-- conda create -n voice python=3.7
+`conda create -n voice python=3.7`
 
 3. conda activate voice
 
@@ -64,9 +65,10 @@ Example: This is a GUI-less example of interface to SV2TTS. The purpose of this 
 
 7. **Download Pretrained Models**
 
-- cd Real-Time-Voice-Cloning
+`cd Real-Time-Voice-Cloning`
 > wget [https://github.com/blue-fish/Real-Time-Voice-Cloning/releases/download/v1.0/pretrained.zip](https://github.com/blue-fish/Real-Time-Voice-Cloning/releases/download/v1.0/pretrained.zip)
-- unzip pretrained.zip
+
+`unzip pretrained.zip`
 
 8. python demo_cli.py
 
