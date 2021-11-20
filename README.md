@@ -6,4 +6,3 @@ Benchmarking the ML Capabilities of Edge
 4) YOLOV5 (on jetson nano)
 5) 360 Video or AR/VR User Eye, Position and Head Movement (on server)
 6) RL-based industrial controller (using cpu)
-7) Fast Fourier Transform (on jetson nano)
