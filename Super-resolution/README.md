@@ -44,7 +44,7 @@ $ git submodule update --init`
 
 **Path:** /home/arani/shivani/jetson-hello/jetson-inference/build/aarch64/bin
 
-**Command:** `python [imagenet.py](http://imagenet.py/) images/fruit_0.jpg output.jpg`
+**Command:** `python imagenet.py images/fruit_0.jpg output.jpg`
 
 This will create an output file with inference.
 
